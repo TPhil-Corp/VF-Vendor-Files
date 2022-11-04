@@ -1,0 +1,10 @@
+[
+{
+"id": "$hdst.vendor.files.main.controller00",
+"author": "Hadestia",
+"once": true,
+"final": true,
+"type": "script",
+"script": "$_main_initializer.lua"
+}
+]

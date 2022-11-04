@@ -1,0 +1,403 @@
+
+    [{
+        "id": "$hdst.ninepatch_groupbox",
+        "type": "animation",
+        "frames": [
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "y": 0,
+                "count": 3
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "y": 6,
+                "count": 3
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "y": 12,
+                "count": 3
+            }
+        ],
+        "meta": {
+            "name": "GROUP_BOX"
+        }
+    }]
+    ,
+    
+    [{
+        "id": "$hdst.ninepatch_groupbox_inset",
+        "type": "animation",
+        "frames": [
+            {
+                "bmp": "frames/group_box_inset.png",
+                "w": 3,
+                "h": 3,
+                "y": 0,
+                "count": 3
+            },
+            {
+                "bmp": "frames/group_box_inset.png",
+                "w": 3,
+                "h": 3,
+                "y": 3,
+                "count": 3
+            },
+            {
+                "bmp": "frames/group_box_inset.png",
+                "w": 3,
+                "h": 3,
+                "y": 6,
+                "count": 3
+            }
+        ],
+        "meta": {
+            "name": "GROUP_BOX_INSET"
+        }
+    }]
+    ,
+    
+    [{
+        "id": "$hdst.ninepatch_groupbox_no_edge",
+        "type": "animation",
+        "frames": [
+            {
+                "bmp": "frames/group_box_no_edge.png",
+                "w": 6,
+                "h": 6,
+                "y": 0,
+                "count": 3
+            },
+            {
+                "bmp": "frames/group_box_no_edge.png",
+                "w": 6,
+                "h": 6,
+                "y": 6,
+                "count": 3
+            },
+            {
+                "bmp": "frames/group_box_no_edge.png",
+                "w": 6,
+                "h": 6,
+                "y": 12,
+                "count": 3
+            }
+        ],
+        "meta": {
+            "name": "GROUP_BOX_NOEDGE"
+        }
+    }]
+    ,
+    
+    [{
+        "id": "$hdst.ninepatch_groupbox_no_edge_hollow",
+        "type": "animation",
+        "frames": [
+            {
+                "bmp": "frames/group_box_hollow_no_edge.png",
+                "w": 6,
+                "h": 6,
+                "y": 0,
+                "count": 3
+            },
+            {
+                "bmp": "frames/group_box_hollow_no_edge.png",
+                "w": 6,
+                "h": 6,
+                "y": 6,
+                "count": 3
+            },
+            {
+                "bmp": "frames/group_box_hollow_no_edge.png",
+                "w": 6,
+                "h": 6,
+                "y": 12,
+                "count": 3
+            }
+        ],
+        "meta": {
+            "name": "GROUP_BOX_NOEDGE_HOLLOW"
+        }
+    }]
+    ,
+    
+    [{
+        "id": "$hdst.ninepatch_groupbox_piece_right",
+        "type": "animation",
+        "frames": [
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 6,
+                "y": 0
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 6,
+                "y": 0,
+                "count": 2
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 6,
+                "y": 6
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 6,
+                "y": 6,
+                "count": 2
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 6,
+                "y": 12
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 6,
+                "y": 12,
+                "count": 2
+            }
+        ],
+        "meta": {
+            "name": "GROUP_BOX_PIECE_LEFT"
+        }
+    }]
+    ,
+    
+    [{
+        "id": "$hdst.ninepatch_groupbox_piece_left",
+        "type": "animation",
+        "frames": [
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 0,
+                "y": 0
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 6,
+                "y": 0
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 6,
+                "y": 0
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 0,
+                "y": 6
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 6,
+                "y": 6
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 6,
+                "y": 6
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 0,
+                "y": 12
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 6,
+                "y": 12
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 6,
+                "y": 12
+            }
+        ],
+        "meta": {
+            "name": "GROUP_BOX_PIECE_RIGHT"
+        }
+    }]
+    ,
+    [{
+        "id": "$hdst.ninepatch_groupbox_piece_top",
+        "type": "animation",
+        "frames": [
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 0,
+                "y": 0
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 6,
+                "y": 0
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 6,
+                "y": 0
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 0,
+                "y": 6
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 6,
+                "y": 6
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 12,
+                "y": 6
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 0,
+                "y": 12
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 6,
+                "y": 6
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 6,
+                "y": 12
+            }
+        ],
+        "meta": {
+            "name": "GROUP_BOX_PIECE_TOP"
+        }
+    }]
+    ,
+    [{
+        "id": "$hdst.ninepatch_groupbox_piece_bottom",
+        "type": "animation",
+        "frames": [
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 0,
+                "y": 0
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 6,
+                "y": 6
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 12,
+                "y": 12
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 0,
+                "y": 6
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 6,
+                "y": 6
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 12,
+                "y": 6
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 0,
+                "y": 12
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 6,
+                "y": 12
+            },
+            {
+                "bmp": "frames/group_box.png",
+                "w": 6,
+                "h": 6,
+                "x": 12,
+                "y": 12
+            }
+        ],
+        "meta": {
+            "name": "GROUP_BOX_PIECE_BOTTOM"
+        }
+    }]
