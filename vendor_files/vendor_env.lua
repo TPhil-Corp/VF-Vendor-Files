@@ -1,8 +1,8 @@
 -- base64 v3.0 (c) 2009 by Alex Kloss <alexthkloss@web.de>
 -- licensed under the terms of the LGPL2
 local Env = {}
-Env.version = '0.3'
-Env.credit = 'base64 v3.0 (c) 2009 by Alex Kloss <alexthkloss@web.de>\nlicensed under the terms of the LGPL2.'
+Env.VERSION = '0.3'
+Env.LICENSE = 'base64 v3.0 (c) 2009 by Alex Kloss <alexthkloss@web.de>\nlicensed under the terms of the LGPL2.'
 
 -- encoding
 function Env.encrypt(data)

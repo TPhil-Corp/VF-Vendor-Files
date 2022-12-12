@@ -1,3 +1,4 @@
+local Parser = require'module/parser'
 local GuiUtils = {}
 GuiUtils.VERSION = '0.2'
 GuiUtils.AUTHOR = 'Hadestia & Erksmit'
@@ -144,22 +145,17 @@ local function getAlignment(alignment)
     return 0.5, 0.5
 end
 
-function secure(cmd)
-    -- lets just prevent users to call this whenever they found this function
-    if not cmd == CONTROLLER_ID then
-        error('Unauthorize use of Function')
-    end
-end
-
 -----> ON EVENTS
 
 function GuiUtils.enterCity(cmd)
-    secure(cmd)
+	Parser.log('GuiUtils - enterCity')
+    Vendor.secure(cmd)
     GuiUtils.floating_notifs = Array()
 end
 
 function GuiUtils.buildCityGui(cmd)
-    secure(cmd)
+	Parser.log('GuiUtils - buildCityGui')
+    Vendor.secure(cmd)
     local main = getRoot()
     -- ## FLOATING NOTIF ROOT OBJECT ## --
     -- delete if the object was already exist
@@ -763,6 +759,48 @@ function GuiUtils.addListboxItem(arg)
     end
     --returns the whole canvas if content were not set
     return mainItem
+end
+
+function GuiUtils.addCheckBox(arg)
+	local COLOR = arg.color or {255, 255, 255}
+	
+	local function getF(bool)
+		if bool then
+			return Vendor.v3_1_0.Icon.available_icon.CHECKBOX_CHECK or Icon.OK
+		end
+		return Vendor.v3_1_0.Icon.available_icon.CHECKBOX_UNCHECK or Icon.CANCEL
+	end
+	
+	arg.parent:addLayout{
+		x = arg.x, y = arg.y, w = arg.w or arg.width, h = arg.h or arg.height
+	}:addCanvas{
+		id = arg.id,
+		onInit = function (s)
+			s.value = arg.value()
+			s.renderIcon = getF(s.value)
+		end,
+		onDraw = function (s, x, y, w, h)
+			Drawing.setAlpha(arg.alpha or 1.0)
+			Drawing.setColor(table.unpack(COLOR))
+			Drawing.drawQuad(
+				x, y,         -- v0
+				x, y + h,     -- v1
+				x + w, y + h, -- v2
+				x + w, y,     -- v3
+				s.renderIcon
+			)
+			Drawing.reset()
+		end,
+		onUpdate = function (s)
+			s.value = arg.value()
+			if s.value ~= nil then
+				s.renderIcon = getF(s.value)
+			end
+		end,
+		onClick = function (s)
+			arg.onChange(not s.value)
+		end
+	}
 end
 
 -- adds a floating alert notification at the center of the screen
