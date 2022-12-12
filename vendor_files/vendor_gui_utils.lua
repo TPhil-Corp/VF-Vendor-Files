@@ -766,9 +766,9 @@ function GuiUtils.addCheckBox(arg)
 	
 	local function getF(bool)
 		if bool then
-			return Vendor.v3_1_0.Icon.available_icon.CHECKBOX_CHECK or Icon.OK
+			return Vendor.v3_1_0.Icon.CHECKBOX_CHECK or Icon.OK
 		end
-		return Vendor.v3_1_0.Icon.available_icon.CHECKBOX_UNCHECK or Icon.CANCEL
+		return Vendor.v3_1_0.Icon.CHECKBOX_UNCHECK or Icon.CANCEL
 	end
 	
 	arg.parent:addLayout{
