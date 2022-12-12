@@ -15,7 +15,8 @@ Vendor files is just like the inbuilt TheoTown APIs, you don't have to use `requ
 all you have to do is start with the `Vendor.[+version].[+moduleName].[+otherKeys]` directly in your script.
 for example:
 ```Lua
-local ICONS = Vendor
+-- fetching icon library
+local ICONS = Vendor.v3_1_0.Icon
 ```
 
 # Using different version
