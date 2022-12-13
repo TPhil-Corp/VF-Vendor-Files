@@ -21,6 +21,7 @@ function Ninepatch.appendRaw(data, cmd)
             Draft.append(draftSTR)
             Vendor[data.VERSION].Ninepatch.appended_draft[id] = true
         else
+            Parser.log('Ninepatch - draft(%s) already exist, skipping...', id)
             Vendor[data.VERSION].Ninepatch.appended_draft[id] = true
         end
     end
@@ -35,9 +36,20 @@ function Ninepatch.init(cmd, vf_version)
         local scc = pcall(function ()
             local np = Draft.getDraft(id)
             local meta = np:getMeta()
-            local frame = np:getFrame(1)
-            Vendor[vf_version].Ninepatch[meta.name] = frame
-            --Vendor[vf_version].Ninepatch.available_ninepatch[meta.name] = frame
+            local name_type = type(meta.name)
+            if name_type == 'table' then
+                for name, frame in pairs(meta.name) do
+                    if not Vendor[vf_version].Ninepatch[name] then
+                        Parser.log('Ninepatch - NP.%s indexed', name)
+                        Vendor[vf_version].Ninepatch[name] = np:getFrame(frame)
+                    end
+                end
+            elseif name_type == 'string' then
+                if not Vendor[vf_version].Ninepatch[meta.name] then
+                    Parser.log('Ninepatch - NP.%s indexed', meta.name)
+                    Vendor[vf_version].Ninepatch[meta.name] = np:getFrame(1)
+                end
+            end
         end)
         if not scc then
             Parser.log('Ninepatch - could not find frames of draft(%s), skipping...', id)

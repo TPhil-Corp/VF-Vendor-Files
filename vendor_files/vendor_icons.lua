@@ -13,6 +13,7 @@ function Icons.appendRaw(data, cmd) ---@param data meta
 			Draft.append(draftSTR)
 			Vendor[data.VERSION].Icon.appendedDraft[id] = true
 		else
+		    Parser.log('Icon - draft(%s) already exist, skipping...', id)
 			Vendor[data.VERSION].Icon.appendedDraft[id] = true
 		end
 	end
