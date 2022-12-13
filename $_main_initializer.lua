@@ -4,15 +4,19 @@ local cmd = 'hdst.vendorMainController'
 local errMssg = 'Unauthorize use of Function'
 
 -- ***************************************************************** --
--- HADESTIA! DON'T FORGET TO INCREASE META VERSION IN EVERY CHANGES.
+-- DON'T FORGET TO INCREASE THE VERSION IN EVERY CHANGES.
 -- ***************************************************************** --
 
 local sDRAFT = script:getDraft()
 local META = sDRAFT:getMeta()
 Parser.version = META.VERSION
+Parser.path = script:getPath()
+
+if not Vendor then Vendor = {} end
+Vendor.supportLink = 'https://recutt.com/xcI/59112949'
+Vendor[META.VERSION] = {}
 
 local dateF = '%m/%d'
-
 local Modules = {
 	DT = 'vendor_dt',
     Env = 'vendor_env',
@@ -20,14 +24,6 @@ local Modules = {
     GuiUtils = 'vendor_gui_utils',
     Ninepatch = 'vendor_nine_patch'
 }
-
-if not Vendor then
-    Vendor = {}   
-end
-Vendor.supportLink = 'https://recutt.com/xcI/59112949'
-
--- vendor file versions to avoid conflict with other plugins
-Vendor[META.VERSION] = Vendor[META.VERSION] == nil and {} or Vendor[META.VERSION]
 
 -- secure function
 if not Vendor.secure then
@@ -73,7 +69,6 @@ for moduleName in pairs(Modules) do
 end
 
 function script:init()
-
     Parser.log('main - init')
     -- cake visible state
     if os.date(dateF) == '12/02' then
@@ -91,7 +86,7 @@ function script:init()
     end
 end
 
-function script:buildCityGUI()
+--[[function script:buildCityGUI()
     if GUI.get('sidebarLine') then
     	if Vendor[META.VERSION].GuiUtils.buildCityGui then
        	 Vendor[META.VERSION].GuiUtils.buildCityGui()
@@ -103,12 +98,4 @@ function script:enterCity()
     if Vendor[META.VERSION].GuiUtils.enterCity then
         Vendor[META.VERSION].GuiUtils.enterCity(cmd)
     end
-end
-
-function script:update()
-    -- hide GuiUtils notif section if user was using tool
-    local guiFN = GUI.get('hdst.vendor.guiutils.floating.notifs.section.gui00')
-    if guiFN then
-        guiFN:setVisible( not GUI.get('cmdCloseTool'):isVisible() )
-    end
-end
+end]]
